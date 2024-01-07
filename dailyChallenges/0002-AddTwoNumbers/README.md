@@ -19,8 +19,8 @@ Explanation: 342 + 465 = 807.
 
 Time complexity: 
 
-#c5f015 Edge cases:
-*carry forward*
+**Edge cases:**
+**carry forward**
 
 For example
 ```

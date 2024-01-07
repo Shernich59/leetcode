@@ -17,8 +17,6 @@ Explanation: 342 + 465 = 807.
 
 ## Problem-Solving Ideas
 
-Time complexity: 
-
 **Edge cases:**
 **carry forward**
 

@@ -1,6 +1,7 @@
 # Day 1: Two Sum
 
 ## [Question](https://leetcode.com/problems/two-sum/description/)
+
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -16,16 +17,15 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 ```
 
+
 ## Problem-Solving Ideas
+
 Time complexity: O(n)
 
 1. take the difference between target and current value
 2. check whether the difference exits in hashmap
 3. if value is found, return difference's index and current value index
 4. else, store the difference in hashmap and continue to check for the next value
-
-![Overview]()
-
 
 ## Code
 ## in Go 
@@ -63,5 +63,3 @@ class Solution(object):
             if diff in hashMap:
                 return [hashMap[diff], i]
             hashMap[n] = i
-
-```

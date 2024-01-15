@@ -41,51 +41,55 @@ m : no of elements in nums1
 n : no of elements in nums2
 
 In order to start from the beginning of nums1, we can start at the back of nums1
-                                                                                           
+
+```                                                       
 nums1 [1,2, ***3*** ,0,0,0]
-                 ***<------***
 
 nums2 [2,5, ***6***]
+```
 
 1. compare the largest elements in nums1 and nums2
 
-
+```
 nums1 [1,2, ***3*** ,0,0,***6***]
 
 nums2 [2, ***5***]
+```
 
 2. place the largest elements in the last position of nums1,
    repeat steps 1 and steps 2
 
 3. Repeat steps 1 and steps 2 and update the index of nums1 and nums2
 
+```
 nums1 [1,2, ***3*** ,0,***5***,6]
 
 nums2 [2]
-
+```
 ------------------------------------
-
+```
 nums1 [1,2, ***3***,5,6]
 
 nums2 [2]
-
+```
 -------------------------------------
-
+```
 nums1 [1,***2*** ,3,5,6]
 
 nums2 [2]
-
+```
 -------------------------------------
-
+```
 nums1 [***1*** ,2,3,5,6]
 
 nums2 [***2*** ]
-
+```
 -------------------------------------
-
+```
 nums1 [1,2,2,3,5,6]
 
 nums2 []
+```
 
 3. return nums1
 
@@ -93,11 +97,11 @@ nums2 []
 if the left nums2 element is greater than first nums1 element
 
 For example:
-
+```
 nums1 [***2*** ,2,3,5,6]
 
 nums2 [***1*** ]
-
+```
 we need to attach the whole nums2 value to nums1 
 
 

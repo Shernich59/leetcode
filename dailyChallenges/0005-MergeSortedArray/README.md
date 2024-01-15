@@ -91,10 +91,10 @@ nums1 [1,2,2,3,5,6]
 nums2 []
 ```
 
-3. return nums1
+3. Return nums1
 
-### Edge cases:
-if the left nums2 element is greater than first nums1 element
+#### Edge cases:
+If the left nums2 element is greater than first nums1 element
 
 For example:
 ```

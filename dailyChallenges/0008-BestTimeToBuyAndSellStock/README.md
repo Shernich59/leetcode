@@ -26,7 +26,6 @@ Note that buying on day 2 and selling on day 1 is not allowed because you must b
 
 ## Code
 ## in Go 
-### HashMap approach code:
 
 ``` Go
 func maxProfit(prices []int) int {
@@ -48,7 +47,6 @@ func maxProfit(prices []int) int {
 ```
 
 ## in Python
-### HashMap approach code:
 ``` python
 class Solution(object):
     def maxProfit(self, prices):

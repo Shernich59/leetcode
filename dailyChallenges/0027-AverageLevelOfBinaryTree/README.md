@@ -28,8 +28,46 @@ BFS approach:
 ## in Go 
 
 ``` Go
+/**
+ * Definition for a binary tree node.
+ * type TreeNode struct {
+ *     Val int
+ *     Left *TreeNode
+ *     Right *TreeNode
+ * }
+ */
+func averageOfLevels(root *TreeNode) []float64 {
+    var res []float64
 
+	if root == nil {
+		return res
+	}
 
+	queue := []*TreeNode{root}
+
+	for len(queue) > 0 {
+		sum := 0.0
+		size := len(queue)
+
+		for i := 0; i < size; i++ {
+			curr := queue[0]
+			queue = queue[1:]
+			sum += float64(curr.Val)
+
+			if curr.Left != nil {
+				queue = append(queue, curr.Left)
+			}
+			if curr.Right != nil {
+				queue = append(queue, curr.Right)
+			}
+		}
+
+		avg := sum / float64(size)
+		res = append(res, avg)
+	}
+
+	return res
+}
 ```
 
 ## in Python
@@ -68,8 +106,48 @@ class Solution(object):
 
 ## in C++
 ``` C++
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
+class Solution {
+public:
+    vector<double> averageOfLevels(TreeNode* root) {
+        queue<TreeNode*> q;
+        vector<double> res;
+        q.push(root);
 
+        while(q.size()) // q is not empty
+        {
+            double avg = 0;
+            double node_nums = q.size();
 
+            for(int i = 0; i < node_nums; i ++)
+            {
+                TreeNode* curr = q.front(); q.pop();
+                avg += curr->val;
+
+                if(curr->left)
+                {
+                    q.push(curr->left);
+                }
+                if(curr->right)
+                {
+                    q.push(curr->right);
+                }
+            }
+            res.push_back(avg/node_nums);
+        }
+        return res;
+    }
+};
 ```
 
 

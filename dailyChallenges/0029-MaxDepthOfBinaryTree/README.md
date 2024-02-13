@@ -11,7 +11,7 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 ```
 Given root = [3,9,20,null,null,15,7]
 Output: 3
-```
+
 
 ## Problem-Solving Ideas
 ### Using recursive DFS approach:
@@ -34,7 +34,6 @@ pop left inside the queue ( FIFO ), then check for the left child of that node
 2. with pre-order traversal, process the node, add left and right, then continue to process each node
 3. increment the depth by 1 after done processing the node, comparing and get the maximum depth
 4. return depth
-
 
 
 ## Code

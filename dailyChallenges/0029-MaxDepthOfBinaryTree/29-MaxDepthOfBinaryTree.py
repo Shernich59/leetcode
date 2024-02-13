@@ -21,7 +21,11 @@ class Solution(object):
 # Using BFS
 # Time complexity: O(n)
 # Space complexity: height of tree, which worst case O(n) 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> af6e38253603f1c830a190b0441931601ce00613
 # Definition for a binary tree node.
 # class TreeNode(object):
 #     def __init__(self, val=0, left=None, right=None):
@@ -50,6 +54,7 @@ class Solution(object):
             level += 1
         return level
 
+<<<<<<< HEAD
 # Iterative DFS approach
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -73,3 +78,5 @@ class Solution(object):
                 stack.append([node.left, depth + 1])
                 stack.append([node.right, depth + 1])
         return res
+=======
+>>>>>>> af6e38253603f1c830a190b0441931601ce00613
